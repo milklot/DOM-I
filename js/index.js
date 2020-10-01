@@ -55,14 +55,19 @@ const logoImage = document.querySelector('#logo-img');
 logoImage.src = "img/logo.png";
 
 // cta
-const newh1 = document.querySelector('h1');
-newh1.textContent = "DOM Is Awesome";
+let h1 = document.querySelector('h1');
+let h1Words = siteContent.cta.h1.split(" ");
+h1Words = h1Words.join("<br>");
+h1.innerHTML = `${h1Words}`;
 
 const newButton = document.querySelector('button');
 newButton.textContent = "Get Started";
 
 const headerImage = document.querySelector('#cta-img');
 headerImage.src = "img/header-img.png";
+
+
+
 
 // main content
 
@@ -95,6 +100,7 @@ const contactH = document.querySelector(".contact h4");
 contactH.textContent = "Contact";
 
 const contactP = document.querySelectorAll(".contact p");
+
 
 contactP[0].textContent = "123 Way 456 Street Somewhere, USA";
 contactP[1].textContent = "1 (888) 888-8888";
